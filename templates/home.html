@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+<title>foodie</title>
+
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+<h1 style="text-align:center; font-size:50px">foodie</h1>
+<div id="home">
+<form>
+<input type="text" name="Search" placeholder="Search"><br>
+<button>Post recipe!</button>
+<!-- post button need to be changed after we create the route-->
+</form>
+<!--<img src="{{url_for('static', filename='palestine.jpg')}}" alt="flag" style="width:304px;height:228px;">-->
+
+</div>
+<div class="shared"> <div>
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" 
+  onclick="closeNav()">&times;</a>
+
+  <a href="{{url_for('country_page', country='palestine')}}"><img src="{{ url_for('static', filename = 'img/palestine.jpg')}}" alt="palestine" style="width:50px;height:40px;"></a>
+
+  <a href="{{url_for('country_page', country='france')}}"><img src="{{ url_for('static', filename = 'img/france.jpg')}}" alt="france" style="width:50px;height:40px;"</a>loseNav()">&times;</a>
+
+  <a href="{{url_for('country_page', country='russia')}}"><img src="{{ url_for('static', filename = 'img/russia.jpg')}}" alt="russia" style="width:50px;height:40px;"</a
+  >
+
+  <a href="{{url_for('country_page', country='mexico')}}"><img src="{{ url_for('static', filename = 'img/mexico.jpg')}}" alt="mexico" style="width:50px;height:40px;"</a>
+</div>
+
+
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+
+</body>
