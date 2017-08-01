@@ -22,9 +22,23 @@
 </div>
 <div class="shared"> <div>
 
+<ul>
+  <br>
+  <li><a href="{{url_for('country_page', country='palestine')}}"><img src="{{ url_for('static', filename = 'img/palestine.jpg')}}" alt="palestine" style="width:50px;height:40px;"></a></li>
+  </ul>
+  <br>
 
+  <li><a href="{{url_for('country_page', country='france')}}"><img src="{{ url_for('static', filename = 'img/france.jpg')}}" alt="palestine" style="width:50px;height:40px;"</a></li>
+  <br>
 
-<div id="mySidenav" class="sidenav">
+  <li><a href="{{url_for('country_page', country='russia')}}"><img src="{{ url_for('static', filename = 'img/russia.jpg')}}" alt="france" style="width:50px;height:40px;"</a></li>
+  <br>
+
+  <li><a href="{{url_for('country_page', country='mexico')}}"><img src="{{ url_for('static', filename = 'img/mexico.jpg')}}" alt="mexico" style="width:50px;height:40px;"</a></li>
+
+</ul>
+
+<!-- <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" 
   onclick="closeNav()">&times;</a>
 
@@ -41,6 +55,6 @@
 
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-
+ -->
 
 </body>

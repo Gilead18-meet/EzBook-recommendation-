@@ -20,7 +20,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-@app.route('/test-homepage')
+@app.route('/')
 def test_homepage():
 	return render_template('home.html')
 
