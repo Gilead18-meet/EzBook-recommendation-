@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Post</title>
+  </head>
+  <body>
+    
+    <div id="container">
+      
+      <div id="page-header">
+        <h1>Add a new recipe</h1>
+        <h2>Cuisines</h2>
+      </div>
+
+      <div id="main">
+        <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Publish a cuisine</a>
+        {% for recipe in recipes %}
+          <div class="recipe-container">
+            <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Edit</a>
+            <div class="recipe-img">
+              <img class="tweet-img" src="{{recipe.picture}}" alt="picture-{{recipe.id}}">
+            </div>
+            <div class="recipe-body">
+              
+              <div>{{recipe.name_of_publisher}}</div>
+              <div>{{recipe.ingredients}}</div>
+              <div>{{recipe.how_to_make}}</div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+    </div>
+    
+  </body>
+</html>
