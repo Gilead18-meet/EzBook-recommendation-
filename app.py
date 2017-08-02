@@ -58,7 +58,8 @@ def post_recipe():
 
 @app.route('/recipes/<String:country_name>')
 def country_recipes(country_name):
-	return render_templarete("country_page")
-	
+	r = session.query(Recipe).filter_by(country=country_name).all()
+	return render_templarete("country.html", country=country_name, country_recipes=r)
+
 
 
