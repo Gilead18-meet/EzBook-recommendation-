@@ -24,11 +24,11 @@ session = DBSession()
 def test_homepage():
 	return render_template('home.html')
 
-
+'''
 @app.route('/post/<int:post_id>')
 def post_recipe(post_id):
     recipe = session.query(Recipe).filter_by(id = post_id).first()
-    return render_template('post.html', recipe = recipe)
+    return render_template('post.html', recipe = recipe)'''
 
 
 @app.route('/countries/<string:country>')
@@ -54,11 +54,11 @@ def protected():
 
 @app.route('/post_recipe')
 def post_recipe():
-	return render_templarete("post.html")
+	return render_template("post.html")
 
-@app.route('/recipes/<String:country_name>')
+@app.route('/recipes/<string:country_name>')
 def country_recipes(country_name):
-	return render_templarete("country_page")
+	return render_template("country_page")
 	
 
 
