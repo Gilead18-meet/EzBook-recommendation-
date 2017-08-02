@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<title> foodie </title>
@@ -9,28 +8,15 @@
       <div id="page-header">
         <h1 style="text-align:center; font-size:50px">foodie</h1>
         <h2>{{country}}</h2>
-      </div>
-      
-      <div id="main">
-
-
-        <!--<a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Post Recipe!</a>
+      </div> 
         {% for recipe in recipes %}
-          <div class="recipe-container">
-            <a href="BROKEN-LINK-FIX-ME" class="btn btn-info" role="button">Edit</a>
-            <div class="recipe-img">
-              <img class="tweet-img" src="{{recipe.picture}}" alt="picture-{{recipe.id}}">
-            </div>
+          {{recipe.title}}
+          <div class="recipes-container">
             <div class="recipe-body">
-              
-              <div>{{recipe.name_of_publisher}}</div>
-              <div>{{recipe.ingredients}}</div>
-              <div>{{recipe.how_to_make}}</div>
+              <img class="recipe-img" src="{{recipe.picture_url}}" alt="picture-{{recipe.id}}">
+              <div class="recipe-text">{{recipe.text}}</div>
             </div>
-          </div>
-        {% endfor %} --> 
-      </div>
-      
+        {% endfor %}
 </div>
 </body>
 </html>

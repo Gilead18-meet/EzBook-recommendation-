@@ -35,8 +35,8 @@ def post_recipe(post_id):
 
 @app.route('/countries/<string:country>')
 def country_page(country):
-	recipes = session.query(Recipe).filter_by(country = country).all()
-	return render_template('country.html', recipes = recipes, country = country)
+	recipes = session.query(Recipe).filter_by(country=country).all()
+	return render_template('country.html', recipes=recipes, country=country)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -63,8 +63,3 @@ def post_recipe():
 def country_recipes(country_name):
 	r = session.query(Recipe).filter_by(country=country_name).all()
 	return render_templarete("country.html", country=country_name, country_recipes=r)
-
-	
-
-
-

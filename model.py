@@ -1,26 +1,11 @@
 from flask_login import UserMixin
 
-from sqlalchemy import Column, DateTime, Integer, String, Boolean
+from sqlalchemy import Column, DateTime, Integer, String, Boolean, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 
 from werkzeug.security import generate_password_hash, check_password_hash
 
 Base = declarative_base()
-
-class Recipe(Base):
-    __tablename__  = 'recipe'
-    id = Column(Integer, primary_key=True)
-    # ADD YOUR FIELD BELOW ID
-    name_of_publisher=Column(String)
-    name_of_recipe=Column(String)
-    country=Column(String)
-    ingredients=Column(String)
-    picture=Column(String)
-    how_to_make=Column(String)
-
-
-# IF YOU NEED TO CREATE OTHER TABLE 
-# FOLLOW THE SAME STRUCTURE AS YourModel
 
 
 class User(UserMixin, Base):
@@ -39,3 +24,20 @@ class User(UserMixin, Base):
 
     def check_password(self, password):
         return check_password_hash(self.pw_hash, password)
+
+
+class Recipe(Base):
+    __tablename__ = 'recipe'
+    id            = Column(Integer, primary_key=True)
+    owner         = Column(Integer, ForeignKey('user.id'))
+    title         = Column(String)
+    country       = Column(String)
+    ingredients   = Column(String)
+    picture_url   = Column(String)
+    description   = Column(String)
+
+
+# IF YOU NEED TO CREATE OTHER TABLE 
+# FOLLOW THE SAME STRUCTURE AS YourModel
+
+
