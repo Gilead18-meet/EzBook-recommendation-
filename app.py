@@ -25,10 +25,12 @@ def test_homepage():
 	return render_template('home.html')
 
 
-##@app.route('/post/<int:post_id>')
-##def post_recipe(post_id):
-##    recipe = session.query(Recipe).filter_by(id = post_id).first()
-##    return render_template('post.html', recipe = recipe)
+'''
+@app.route('/post/<int:post_id>')
+def post_recipe(post_id):
+    recipe = session.query(Recipe).filter_by(id = post_id).first()
+    return render_template('post.html', recipe = recipe)'''
+
 
 
 @app.route('/countries/<string:country>')
@@ -54,12 +56,14 @@ def protected():
 
 @app.route('/post_recipe')
 def post_recipe():
-	return render_templarete("post.html")
+	return render_template("post.html")
 
 @app.route('/recipes/<string:country_name>')
 def country_recipes(country_name):
 	r = session.query(Recipe).filter_by(country=country_name).all()
 	return render_templarete("country.html", country=country_name, country_recipes=r)
+
+	
 
 
 
