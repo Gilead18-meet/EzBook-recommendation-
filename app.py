@@ -56,6 +56,7 @@ def protected():
 
 @app.route('/post_recipe')
 def post_recipe():
+	
 	return render_template("post.html")
 
 @app.route('/recipes/<string:country_name>')
