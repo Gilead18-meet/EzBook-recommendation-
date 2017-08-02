@@ -56,10 +56,35 @@ def protected():
 
 @app.route('/post_recipe')
 def post_recipe():
-	
-	return render_template("post.html")
+    if request.method == 'GET':
+		return render_template("post.html")
+    else:
+      # read form data
+      new_user_name         = request.form.get('user_name')
+      new_country  = request.form.get('country')
+      new_Recipe_Name = request.form.get('Recipe_Name')
+      new_Pic_Of_Dish     = request.form.get('Pic_Of_Dish')
+      new_ingredients   = request.form.get('Ingredients')
+      new_description = request.form.get('How_To_Make')
+
+      post=Recipe(owner=new_user_name,\
+      	country=new_country,\
+      	title=new_Recipe_Name,\
+      	picture_url=new_Pic_Of_Dish,\
+      	ingredients=new_ingredients,\
+      	owner=new_user_name,\
+      	description=new_description
+
+      	 )
+      session.add(post)
+      session.commit()
+
+
+      # redirect user to the page that views all tweets
+      return redirect(url_for('my_feed'))
+
 
 @app.route('/recipes/<string:country_name>')
 def country_recipes(country_name):
 	r = session.query(Recipe).filter_by(country=country_name).all()
-	return render_templarete("country.html", country=country_name, country_recipes=r)
+	return render_template("country.html", country=country_name, country_recipes=r)
