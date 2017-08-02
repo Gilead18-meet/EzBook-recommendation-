@@ -51,3 +51,14 @@ def logout():
 @login_required
 def protected():
     return render_template('protected.html')
+
+@app.route('/post_recipe')
+def post_recipe():
+	return render_templarete("post.html")
+
+@app.route('/recipes/<String:country_name>')
+def country_recipes(country_name):
+	return render_templarete("country_page")
+	
+
+
