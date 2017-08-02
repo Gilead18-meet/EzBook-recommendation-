@@ -58,7 +58,7 @@ def post_recipe():
 
 @app.route('/recipes/<string:country_name>')
 def country_recipes(country_name):
-	return render_template("country_page")
+	
 	
 
 
