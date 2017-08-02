@@ -54,4 +54,11 @@ def protected():
 
 @app.route('/post_recipe')
 def post_recipe():
-	return render_template("post.html")
+	return render_templarete("post.html")
+
+@app.route('/recipes/<String:country_name>')
+def country_recipes(country_name):
+	return render_templarete("country_page")
+	
+
+
