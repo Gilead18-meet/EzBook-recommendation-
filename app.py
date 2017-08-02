@@ -51,3 +51,7 @@ def logout():
 @login_required
 def protected():
     return render_template('protected.html')
+
+@app.route('/post_recipe')
+def post_recipe():
+	return render_template("post.html")
