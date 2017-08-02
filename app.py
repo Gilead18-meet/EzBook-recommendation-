@@ -38,7 +38,6 @@ def country_page(country):
 	recipes = session.query(Recipe).filter_by(country=country).all()
 	return render_template('country.html', recipes=recipes, country=country)
 
-
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     return login_handler(request)
@@ -54,34 +53,32 @@ def logout():
 def protected():
     return render_template('protected.html')
 
-@app.route('/post_recipe')
+@app.route('/post_recipe', methods=['GET','POST'])
 def post_recipe():
     if request.method == 'GET':
-		return render_template("post.html")
+        return render_template("post.html")
+
     else:
-      # read form data
-      new_user_name         = request.form.get('user_name')
-      new_country  = request.form.get('country')
+      #read form data
+      new_user_name = request.form.get('user_name')
+      new_country = request.form.get('Recipe_Country')
       new_Recipe_Name = request.form.get('Recipe_Name')
-      new_Pic_Of_Dish     = request.form.get('Pic_Of_Dish')
-      new_ingredients   = request.form.get('Ingredients')
+      new_Pic_Of_Dish = request.form.get('Pic_Of_Dish')
+      new_ingredients = request.form.get('Ingredients')
       new_description = request.form.get('How_To_Make')
 
       post=Recipe(owner=new_user_name,\
-      	country=new_country,\
-      	title=new_Recipe_Name,\
-      	picture_url=new_Pic_Of_Dish,\
-      	ingredients=new_ingredients,\
-      	owner=new_user_name,\
-      	description=new_description
-
-      	 )
+       country=new_country,\
+       title=new_Recipe_Name,\
+       picture_url=new_Pic_Of_Dish,\
+       ingredients=new_ingredients,\
+       description=new_description)
       session.add(post)
       session.commit()
 
-
       # redirect user to the page that views all tweets
-      return redirect(url_for('my_feed'))
+      print(new_country)
+      return redirect(url_for('country_page',country=new_country))
 
 
 @app.route('/recipes/<string:country_name>')
