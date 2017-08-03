@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-<title>foodie</title>
+<title>Foodie</title>
 
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
@@ -10,13 +10,20 @@
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
-<h1 style="text-align:center; font-size:50px">foodie</h1>
+<h1 style="text-align:center; font-size:125px">Foodie</h1>
 <div id="home">
+
 <form>
 <input type="text" name="Search" placeholder="Search"><br>
-<a href="{{url_for('post_recipe')}}">Post recipe!</a>
-<!-- post button need to be changed after we create the route-->
+<a href="{{url_for('post_recipe')}}">Post recipe!</a> 
 </form>
+<h2 style="text-align: center;font-size: 40px ; margin-left: 170px"> About Foodie:</h2>
+<h3 style="text-align: center;font-size: 30px ; margin-left: 170px">Hello! We are a group of Israeli and Palestinian teenagers who want to learn more about each others culture. We created this website to help people like us to learn more about other cultures around the world through food recipes. </h3>
+
+
+
+<!-- post button need to be changed after we create the route-->
+
 <!--<img src="{{url_for('static', filename='palestine.jpg')}}" alt="flag" style="width:304px;height:228px;">-->
 
 </div>
@@ -24,19 +31,19 @@
 
 <ul>
   <br>
-  <li><a href="{{url_for('country_page', country='Palestine')}}"><img src="{{ url_for('static', filename = 'img/palestine.jpg')}}" alt="palestine" style="width:50px;height:40px;"></a></li>
+  <li><a href="{{url_for('country_page', country='Palestine')}}"><img src="{{ url_for('static', filename = 'img/palestine.jpg')}}" alt="Palestine" style="width:70px;height:60px;"></a></li>
  
   <br>
 
-  <li><a href="{{url_for('country_page', country='France')}}"><img src="{{ url_for('static', filename = 'img/france.jpg')}}" alt="palestine" style="width:50px;height:40px;"</a></li>
+  <li><a href="{{url_for('country_page', country='France')}}"><img src="{{ url_for('static', filename = 'img/france.jpg')}}" alt="France" style="width:70px;height:60px;"</a></li>
   <br>
 
-  <li><a href="{{url_for('country_page', country='Russia')}}"><img src="{{ url_for('static', filename = 'img/russia.jpg')}}" alt="france" style="width:50px;height:40px;"</a></li>
+  <li><a href="{{url_for('country_page', country='Russia')}}"><img src="{{ url_for('static', filename = 'img/russia.jpg')}}" alt="France" style="width:70px;height:60px;"</a></li>
   <br>
 
-  <li><a href="{{url_for('country_page', country='Mexico')}}"><img src="{{ url_for('static', filename = 'img/mexico.jpg')}}" alt="mexico" style="width:50px;height:40px;"</a></li> <br>
+  <li><a href="{{url_for('country_page', country='Mexico')}}"><img src="{{ url_for('static', filename = 'img/mexico.jpg')}}" alt="Mexico" style="width:70px;height:60px;"</a></li> <br>
 
-<li><a href="{{url_for('country_page', country='Israel')}}"><img src="{{ url_for('static', filename = 'img/israel.jpg')}}" alt="israel" style="width:50px;height:40px;"</a></li>
+<li><a href="{{url_for('country_page', country='Israel')}}"><img src="{{ url_for('static', filename = 'img/israel.jpg')}}" alt="Israel" style="width:70px;height:60px;"</a></li>
 
 
 
