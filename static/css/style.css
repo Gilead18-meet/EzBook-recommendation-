@@ -1,3 +1,7 @@
+body {
+    background-color:#BBD1EA;
+}
 h1 {
-  color: blue;
+    text-align: center;
+    font: verdana;
 }
