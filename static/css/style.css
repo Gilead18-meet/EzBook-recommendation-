@@ -1,7 +1,35 @@
 body {
-    background-color:#BBD1EA;
+    background-color:#EDEEC0;
+    font-family: Comic Sans MS;
 }
-h1 {
+.main_header {
+    font-size: 1000%;
     text-align: center;
-    font: verdana;
+}
+#post-link{
+     text-align: center;
+     font-size: 200%;
+}
+
+h2{
+     text-align: center;
+     font-size: 400%;
+}
+#names{
+     text-align: center;
+     font-size: 200%;
+}
+#who{
+    text-align: center;
+     font-size: 300%
+}
+h3{
+     font-size: 200%}
+
+#about{
+    text-align: center;
+     font-size: 250%
+}
+.recipe-container{
+    font-size: 200%;
 }

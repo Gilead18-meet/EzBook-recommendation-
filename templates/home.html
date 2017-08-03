@@ -9,25 +9,20 @@
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
-<h1>Foodie</h1>
-<div id="home">
-<form>
+<h1 class="main_header">Foodie</h1>
+<div id="post-link">
 <a href="{{url_for('post_recipe')}}">Post recipe!</a> 
-</form>
-<h2 style="text-align: center;font-size: 40px ; margin-left: 170px"> About Foodie:</h2>
-<h3 style="text-align: center;font-size: 30px ; margin-left: 170px">Hello! We are a group of Israeli and Palestinian teenagers who want to learn more about each others culture. We created this website to help people like us to learn more about other cultures around the world through food recipes. </h3>
-
-
-
-<!-- post button need to be changed after we create the route-->
-
-<!--<img src="{{url_for('static', filename='palestine.jpg')}}" alt="flag" style="width:304px;height:228px;">-->
-
+</div>
+<div id="about-us">
+<h2> About Foodie:</h2>
+<p id="about">Hello! We are a group of Israeli and Palestinian teenagers who want to learn more about each others culture. We created this website to help people like us to learn more about other cultures around the world through food recipes. </p>
+<h3 id="who"> So who are we?</h3>
+<h3 id="names"> Gilead, Noa, Mahmoud, Luna and Warrd</h3>
 </div>
 <div class="shared">
-
 <ul>
   <br>
+  <h3>countries</h4>
   <li><a href="{{url_for('country_page', country='Palestine')}}"><img src="{{ url_for('static', filename = 'img/palestine.jpg')}}" alt="Palestine" style="width:70px;height:60px;"></a></li>
  
   <br>
@@ -45,8 +40,7 @@
 
 </ul>
 </div>
-<h3 style="text-align: center;font-size: 30px; margin-bottom: 200px; margin-top: -200px"> So who are we?:</h3>
-<h3 style="text-align: center;font-size: 30px; margin-bottom: 200px; margin-top: -170px"> Gilead, Noa, Mahmoud,Luna and Warrd</h3>
+
 <!-- <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" 
   onclick="closeNav()">&times;</a>
