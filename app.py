@@ -77,7 +77,6 @@ def post_recipe():
       session.commit()
 
       # redirect user to the page that views all tweets
-      print(new_country)
       return redirect(url_for('country_page',country=new_country))
 
 
