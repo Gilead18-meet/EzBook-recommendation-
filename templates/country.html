@@ -2,22 +2,34 @@
 <html>
 <head>
 	<title> foodie </title>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
 <div id="container">
       <div id="page-header">
-        <h1 style="text-align:center; font-size:50px">foodie</h1>
+        <h1 style="text-align:center; font-size:50px">Foodie</h1>
         <h2>{{country}}</h2>
+        <a href="{{url_for('test_homepage')}}">Back Home</a>
       </div> 
         {% for recipe in recipes %}
           <div class="recipe-container">
               {{recipe.title}}
               {{current_user.email}}
+              <br>
               <div class="recipe-body">
                 <img class="recipe-img" src="{{recipe.picture_url}}" alt="picture-{{recipe.id}}">
+                <br>
               <div class="recipe-ingredients">{{recipe.ingredients}}</div>
+              <br>
               <div class="recipe-description">{{recipe.description}}</div>
+              <a href="{{url_for('delete_recipe', recipe_id = recipe.id)}}">Delete</a>
               </div>
+              <br> <br> <br>
             </div>
         {% endfor %}
 </div>

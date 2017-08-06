@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <html>
 	<head>
+<<<<<<< HEAD
 		<title>Foodie</title>
+=======
+		<title>foodie</title>
+		<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+>>>>>>> 74839e61146d9e7acc2c00037421b26430b30b7c
 	</head>
 	<body>
 
@@ -9,6 +19,7 @@
 		<h3>Share your recipe here!</h3>
 		
 		<div id="post">
+<<<<<<< HEAD
 			<form action = "url_for('post_recipe')" method = "post">
 				<input type="text" name="user_name" placeholder="Your Name"><br> <br>
 				<input type="text" name="Recipe_Country" placeholder="Recipe Country"><br> <br> 
@@ -17,6 +28,16 @@
 				<input type="file" name="Pic_Of_Dish" accept="image/*"> <br>
 				<textarea name="How_To_Make" rows="25" cols="20">How To Make</textarea>
 				<input type="submit" name="Submit" value="submit">
+=======
+			<form action = "{{url_for('post_recipe')}}" method = "post">
+				<input type="text" name="user_name" placeholder="Your Name">
+				<input type="text" name="Recipe_Country" placeholder="Recipe Country"> 
+				<input type="text" name="Recipe_Name" placeholder="Recipe Name">
+				<input type="text" name="Pic_Of_Dish" placeholder="picture url"><br>
+				<textarea name="Ingredients" rows="25" cols="20" placeholder="Ingredients"></textarea> 
+				<textarea name="How_To" rows="25" cols="20" placeholder="How To Make"></textarea> 	 
+				<input type="submit" namPic_Of_Dishe="Submit" value="submit">
+>>>>>>> 74839e61146d9e7acc2c00037421b26430b30b7c
 			</form>
 		</div>
 		

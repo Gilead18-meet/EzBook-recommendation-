@@ -13,11 +13,9 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+Base.metadata.create_all()
 
-recipe1 = Recipe(name_of_publisher = "Gilead", name_of_recipe ="amazing flour",country= "USA", ingredients = "flour", picture= "coming up", how_to_make = "mix flour")
+recipe1 = Recipe(owner = "Gilead", title ="amazing flour",country= "USA", ingredients = "flour", picture_url= "coming up", description = "mix flour")
 session.add(recipe1)
 
 session.commit()
-
-r = session.query(Recipe).filter_by(id = 1).first()
-print(r.name_of_publisher)
