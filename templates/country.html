@@ -9,14 +9,14 @@
       <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
-<body>
+<body background="{{ url_for('static', filename = 'img/background.jpg')}}">
 <div id="container">
       <div id="page-header">
 <center>
-<img src="{{ url_for('static', filename = 'img/logo.png')}}" height="200" width="300">
+<img src="{{ url_for('static', filename = 'img/logo123.png')}}" height="200" width="300">
 </center>
-        <h2>{{country}}</h2>
-        <a href="{{url_for('test_homepage')}}">Back Home</a>
+        <h1> <font color="white"> <font size= "15"></style>{{country}}</font> </font></h1>
+        <a href="{{url_for('test_homepage')}}"> <font color="black"><font size= "6">Back Home</font></font></a>
       </div> 
         {% for recipe in recipes %}
           <div class="recipe-container">
