@@ -12,7 +12,9 @@
 <body>
 <div id="container">
       <div id="page-header">
-        <h1 style="text-align:center; font-size:50px">Foodie</h1>
+<center>
+<img src="{{ url_for('static', filename = 'img/logo.png')}}" height="200" width="300">
+</center>
         <h2>{{country}}</h2>
         <a href="{{url_for('test_homepage')}}">Back Home</a>
       </div> 

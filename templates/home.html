@@ -1,31 +1,28 @@
 <!DOCTYPE html>
 <head>
-      <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel=stylesheet type=text/css href="{{ url_for('static', filename  ='css/bootstrap.min.css') }}">
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
 
       <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
       <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
       <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
-<body>
-<div style="text-align: center;"><IMG SRC="{{ url_for('static', filename = 'img/logo.png')}}" ALT="logo"></div>
+<body background="{{ url_for('static', filename = 'img/background.jpg')}}">
+<center>
+<img src="{{ url_for('static', filename = 'img/logo123.png')}}" height="200" width="300">
+</center>
+
+
+<div id="about-us">
+<p id="about"><font color="white">Hello! We are a group of Israeli and Palestinian teenagers who want to learn more about each others culture. We created this website to help people like us to learn more about other cultures around the world through food recipes.</font> </p>
+</div>
 <div id="post-link">
 <a href="{{url_for('post_recipe')}}">Post recipe!</a> 
-</form>
-
-<!-- post button need to be changed after we create the route-->
-
-<!--<img src="{{url_for('static', filename='palestine.jpg')}}" alt="flag" style="width:304px;height:228px;">-->
-
-</div>
-<div id="about-us">
-<h2> About Foodie:</h2>
-<p id="about">Hello! We are a group of Israeli and Palestinian teenagers who want to learn more about each others culture. We created this website to help people like us to learn more about other cultures around the world through food recipes. </p>
 </div>
 <div class="shared">
 <ul>
   <br>
-  <h3>countries</h4>
+  <h3> <font color="white">countries </font></h3>
   <li><a href="{{url_for('country_page', country='Palestine')}}"><img src="{{ url_for('static', filename = 'img/palestine.jpg')}}" alt="Palestine" style="width:70px;height:60px;"></a></li>
  
   <br>
