@@ -1,8 +1,3 @@
-body {
-    background-color:#EDEEC0;
-    font-family: Comic Sans MS;
-}
-
 #post-link{
      text-align: center;
      font-size: 200%;
@@ -19,6 +14,7 @@ body {
 }
 .recipe-container{
     font-size: 200%;
+    background:"white";
 }
 .recipe-img{
     width: 400px;

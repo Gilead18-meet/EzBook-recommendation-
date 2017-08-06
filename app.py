@@ -19,6 +19,9 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+# we need this library for HTML-safe string operations
+import cgi
+
 
 @app.route('/')
 def test_homepage():
@@ -66,6 +69,8 @@ def post_recipe():
 			new_Pic_Of_Dish = request.form.get('Pic_Of_Dish')
 			new_ingredients = request.form.get('Ingredients')
 			new_description = request.form.get('How_To_Make')
+
+			new_ingredients = (new_ingredients.replace('\n', '<br>'))
 
 			post=Recipe(owner=new_user_name,
 			 country=new_country,

@@ -26,9 +26,9 @@
               <div class="recipe-body">
                 <img class="recipe-img" src="{{recipe.picture_url}}" alt="picture-{{recipe.id}}">
                 <br>
-              <div class="recipe-ingredients">{{recipe.ingredients}}</div>
+              <div class="recipe-ingredients">{{recipe.ingredients|safe}}</div>
               <br>
-              <div class="recipe-description">{{recipe.description}}</div>
+              <div class="recipe-description">{{recipe.description|safe}}</div>
               <a href="{{url_for('delete_recipe', recipe_id = recipe.id)}}">Delete</a>
               </div>
               <br> <br> <br>
