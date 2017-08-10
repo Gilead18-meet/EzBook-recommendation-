@@ -13,14 +13,31 @@
     font-size: 250%
 }
 .recipe-container{
-    font-size: 200%;
-    background:"white";
+    margin: auto;
+    width: 80%;
+    font-size: 150%;
+    background-color: #E8C384;
+    
 }
 .recipe-img{
-    width: 400px;
+    width: 300px;
 }
 #logo{
     text-align: center;
     width: 400%
 
 }
+.recipe-body{
+    text-align: center;
+}
+
+/*#falafel{
+    position: absolute;
+    left: 20%;
+    top: 100%;
+}
+#pizza{
+    position: absolute;
+    left: 120%;
+    top: 0%;
+}*/
