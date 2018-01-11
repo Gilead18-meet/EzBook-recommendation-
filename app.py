@@ -56,7 +56,7 @@ def logout():
 def protected():
 		return render_template('protected.html')
 
-@app.route('/post_recipe', methods=['GET','POST'])
+@app.route('/post_recommendation', methods=['GET','POST'])
 def post_recipe():
 		if request.method == 'GET':
 				return render_template("post.html")
@@ -64,32 +64,32 @@ def post_recipe():
 		else:
 			#read form data
 			new_user_name = request.form.get('user_name')
-			new_country = request.form.get('Recipe_Country')
-			new_Recipe_Name = request.form.get('Recipe_Name')
-			new_Pic_Of_Dish = request.form.get('Pic_Of_Dish')
-			new_ingredients = request.form.get('Ingredients')
-			new_description = request.form.get('How_To_Make')
+			new_genre = request.form.get('book_genre')
+			new_book_Name = request.form.get('book_Name')
+			new_Pic_Of_book = request.form.get('Pic_Of_book')
+			new_recommendation = request.form.get('recommendation')
+			new_description = request.form.get('description_of_book')
 
-			new_ingredients = (new_ingredients.replace('\n', '<br>'))
+			new_recommendation = (new_recommendation.replace('\n', '<br>'))
 
-			post=Recipe(owner=new_user_name,
-			 country=new_country,
-			 title=new_Recipe_Name,
-			 picture_url=new_Pic_Of_Dish,
-			 ingredients=new_ingredients,
+			post=recommendation(owner=new_user_name,
+			 genre=new_genre,
+			 title=new_book_Name,
+			 picture_url=new_Pic_Of_book,
+			 recommendation=new_recommendation,
 			 description=new_description)
 			session.add(post)
 			session.commit()
 
 			# redirect user to the page that views all tweets
-			return redirect(url_for('country_page',country=new_country))
+			return redirect(url_for('genre_page',genre=new_genre))
 
 
-@app.route('/recipes/<string:country>')
-def country_page(country):
-	country = country.lower()
-	r = session.query(Recipe).filter_by(country=country).all()
-	return render_template("country.html", country=country, recipes=r)
+@app.route('/recommendation/<string:janer>')
+def recommendation_page(recommendation):
+	recommendation = recommendation.lower()
+	r = session.query(genre).filter_by(recommendation=recommendation).all()
+	return render_template("recommendation.html", recommendation=recommendation, genre=r)
 
 @app.route('/delete/<int:recipe_id>', methods=['GET', 'POST'])
 def delete_recipe(recipe_id):

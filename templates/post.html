@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>foodie</title>
+		<title>EzBook-reco</title>
 	 <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
       <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -12,18 +12,18 @@
 	<body background="{{ url_for('static', filename = 'img/background.jpg')}}">
 
 <center>
-<img src="{{ url_for('static', filename = 'img/logo123.png')}}" height="200" width="300">
+<img src="{{ url_for('static', filename = 'img/logo.png')}}" height="200" width="300">
 </center>
-		<h3>Share your recipe here!</h3>
+		<h3>Share your recommendation here!</h3>
 		<div id="post">
-			<form action = "{{url_for('post_recipe')}}" method = "post">
+			<form action = "{{url_for('post_recommendation')}}" method = "post">
 				<input type="text" name="user_name" placeholder="Your Name">
-				Select Country: <select name="Recipe_Country">			
-  <option value="israel">israel</option>
-  <option value="palestine">palestine</option>
-  <option value="mexico">mexico</option>
-  <option value="russia">russia</option>
-  <option value="france">france</option>
+				Select genre: <select name="recommendation_genre">			
+  <option value="suspense">suspense</option>
+  <option value="history">history</option>
+  <option value="languages">languages</option>
+  <option value="science">science</option>
+  <option value="fantasy">fantasy</option>
                 </select>
 				<input type="text" name="Recipe_Name" placeholder="Recipe Name">
 				<input type="text" name="Pic_Of_Dish" placeholder="picture url"><br>
