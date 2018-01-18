@@ -27,17 +27,15 @@ class User(UserMixin, Base):
 
 
 class Recipe(Base):
-    __tablename__ = 'recipe'
+    __tablename__ = 'recommendation'
     id            = Column(Integer, primary_key=True)
     owner         = Column(Integer, ForeignKey('user.id'))
     title         = Column(String)
-    country       = Column(String)
-    ingredients   = Column(String)
+    genre       = Column(String)
+    recommendation   = Column(String)
     picture_url   = Column(String)
-    description   = Column(String)
+    summary  = Column(String)
 
 
 # IF YOU NEED TO CREATE OTHER TABLE 
 # FOLLOW THE SAME STRUCTURE AS YourModel
-
-

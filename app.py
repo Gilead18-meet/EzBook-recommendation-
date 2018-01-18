@@ -57,18 +57,18 @@ def protected():
 		return render_template('protected.html')
 
 @app.route('/post_recommendation', methods=['GET','POST'])
-def post_recipe():
+def post_recommendation():
 		if request.method == 'GET':
 				return render_template("post.html")
 
 		else:
 			#read form data
 			new_user_name = request.form.get('user_name')
-			new_genre = request.form.get('book_genre')
-			new_book_Name = request.form.get('book_Name')
+			new_genre = request.form.get('genre')
+			new_book_Name = request.form.get('book_name')
 			new_Pic_Of_book = request.form.get('Pic_Of_book')
 			new_recommendation = request.form.get('recommendation')
-			new_description = request.form.get('description_of_book')
+			new_summary = request.form.get('summary')
 
 			new_recommendation = (new_recommendation.replace('\n', '<br>'))
 
@@ -77,7 +77,7 @@ def post_recipe():
 			 title=new_book_Name,
 			 picture_url=new_Pic_Of_book,
 			 recommendation=new_recommendation,
-			 description=new_description)
+			 summary=new_summary)
 			session.add(post)
 			session.commit()
 
@@ -85,13 +85,13 @@ def post_recipe():
 			return redirect(url_for('genre_page',genre=new_genre))
 
 
-@app.route('/recommendation/<string:janer>')
-def recommendation_page(recommendation):
-	recommendation = recommendation.lower()
-	r = session.query(genre).filter_by(recommendation=recommendation).all()
-	return render_template("recommendation.html", recommendation=recommendation, genre=r)
+@app.route('/recommendation/<string:genre>')
+def genre_page(genre):
+	genre = genre.lower()
+	r = session.query(recommendation).filter_by(genre=genre).all()
+	return render_template("genre.html", genre=genre, recommendation=r)
 
-@app.route('/delete/<int:recipe_id>', methods=['GET', 'POST'])
+@app.route('/delete/<int:recommendation_id>', methods=['GET', 'POST'])
 def delete_recipe(recipe_id):
 		recipe = session.query(Recipe).filter_by(id= recipe_id).first()
 		if request.method == 'GET':
