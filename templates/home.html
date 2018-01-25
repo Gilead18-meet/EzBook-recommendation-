@@ -14,62 +14,29 @@
 
 
 <div id="Goal_of_the_site">
-<p id="about the site"><font color="white">This site comes to help readers find books they like and recommend books for other. how does it work? you can choose a genre and find a book you are interested in or post a new recommendation. have fun! :) </font> </p>
+<p id="about the site"><font color="red">This site comes to help readers find books they like and recommend books for other. how does it work? you can choose a genre and find a book you are interested in or post a new recommendation. have fun! :) </font> </p>
 </div>
 <div id="post-link">
-<a href="{{url_for('post_page')}}"> <font color="black">Post recipe!</font></a> 
+<a href="{{url_for('post_recommendation')}}"> <font color="black">Post recommendation!</font></a> 
 </div>
-<div class="shared">
+<div class="shared">  
 <ul>
   <br>
   <h3> <font color="white">genre</font></h3>
-  <li><a href="{{url_for('genre_page', genre='fantasy')}}"><img src="{{ url_for('static', filename = 'img/fantasy.jpg')}}" alt="fantasy" style="width:70px;height:60px;"></a></li>
+  <li><a href="{{url_for('genre', genre='fantasy')}}"><img src="{{ url_for('static', filename = 'img/fantasy.jpg')}}" alt="fantasy" style="width:70px;height:60px;"></a></li>
  
   <br>
 
-  <li><a href="{{url_for('genre_page', genre='history')}}"><img src="{{ url_for('static', filename = 'img/history.jpg')}}" alt="history" style="width:70px;height:60px;"></a></li>
+  <li><a href="{{url_for('genre', genre='history')}}"><img src="{{ url_for('static', filename = 'img/history.jpg')}}" alt="history" style="width:70px;height:60px;"></a></li>
   <br>
 
-  <li><a href="{{url_for('genre_page', genre='science')}}"><img src="{{ url_for('static', filename = 'img/science.jpg')}}" alt="science" style="width:70px;height:60px;"></a></li>
+  <li><a href="{{url_for('genre', genre='science')}}"><img src="{{ url_for('static', filename = 'img/science.jpg')}}" alt="science" style="width:70px;height:60px;"></a></li>
   <br>
 
-  <li><a href="{{url_for('genre_page', genre='suspense')}}"><img src="{{ url_for('static', filename = 'img/suspense.jpg')}}" alt="suspense" style="width:70px;height:60px;"></a></li> <br>
+  <li><a href="{{url_for('genre', genre='suspense')}}"><img src="{{ url_for('static', filename = 'img/suspense.jpg')}}" alt="suspense" style="width:70px;height:60px;"></a></li> <br>
 
-<li><a href="{{url_for('genre_page', genre='languages')}}"><img src="{{ url_for('static', filename = 'img/languages.jpg')}}" alt="languages" style="width:70px;height:60px;"></a></li>
+<li><a href="{{url_for('genre', genre='languages')}}"><img src="{{ url_for('static', filename = 'img/languages.jpg')}}" alt="languages" style="width:70px;height:60px;"></a></li>
 </ul>
 </div>
-<!-- <div class="imagecontainer">
-
-<center>
-<img src="{{ url_for('static', filename = 'img/falafel.jpg')}}" height="300" width="400">
-</center>
-<center>
-<img src="{{ url_for('static', filename = 'img/pizza.jpg')}}" height="300" width="400">
-<center>
-<br>
-<br>
-<img src="{{ url_for('static', filename = 'img/sushi.jpg')}}" height="300" width="400">
-</center>
-</center>
-</div>
- -->
-<!-- <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" 
-  onclick="closeNav()">&times;</a>
-
-  <a href="{{url_for('country_page', country='palestine')}}"><img src="{{ url_for('static', filename = 'img/palestine.jpg')}}" alt="palestine" style="width:50px;height:40px;"></a>
-
-  <a href="{{url_for('country_page', country='france')}}"><img src="{{ url_for('static', filename = 'img/france.jpg')}}" alt="france" style="width:50px;height:40px;"</a>loseNav()">&times;</a>
-
-  <a href="{{url_for('country_page', country='russia')}}"><img src="{{ url_for('static', filename = 'img/russia.jpg')}}" alt="russia" style="width:50px;height:40px;"</a
-  >
-
-  <a href="{{url_for('country_page', country='mexico')}}"><img src="{{ url_for('static', filename = 'img/mexico.jpg')}}" alt="mexico" style="width:50px;height:40px;"</a>
-</div>
-
-
-
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
- -->
 
 </body>

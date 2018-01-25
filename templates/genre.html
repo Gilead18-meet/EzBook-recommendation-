@@ -13,7 +13,7 @@
 <div id="container">
       <div id="page-header">
 <center>
-<img src="{{ url_for('static', filename = 'img/logo.png')}}" height="200" width="300">
+<img src="{{ url_for('static', filename = 'img/logo.jpg')}}" height="200" width="300">
 </center>
         <h1> <font color="white"> <font size= "15"></style>{{country}}</font> </font></h1>
         <a href="{{url_for('test_homepage')}}"> <font color="black"><font size= "6">Back Home</font></font></a>
@@ -22,14 +22,15 @@
           <div class="recommendation-container">
               <div class="recommendation-body">
               {{recommendation.title}}
-              {{current_user.email}}
+              
               <br>
               <img class="recommendation-img" src="{{recommendation.picture_url}}" alt="picture-{{recommendation.id}}">
               <br>
               <div class="recommendation-recommendation">{{recommendation.recommendation|safe}}</div>
               <br>
-              <div class="book-description">{{book.description|safe}}</div>
+              <div class="recommendation-name">{{recommendation.recommendation|safe}}</div>
               <br>
+              <div class="recommendation-summary">{{recommendation.recommendation|safe}}</div>
               <br>
               <br>
               <a href="{{url_for('delete_recommendation', recommendation_id = recommendation.id)}}">Delete</a>

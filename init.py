@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 
 # SQLAlchemy
-from model import Base, Recipe
+from model import Base, Recommendation
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
