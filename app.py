@@ -92,11 +92,11 @@ def genre_page(genre):
 	return render_template("genre.html", genre=genre, recommendation=r)
 
 @app.route('/delete/<int:recommendation_id>', methods=['GET', 'POST'])
-def delete_recipe(recipe_id):
-		recipe = session.query(Recipe).filter_by(id= recipe_id).first()
+def delete_recommendation(recommendation_id):
+		recommendation = session.query(recommendation).filter_by(id= recommendation_id).first()
 		if request.method == 'GET':
-			return render_template('delete.html', recipe = recipe)
+			return render_template('delete.html', recommendation = recommendation)
 		else:
-			country = recipe.country
-			session.delete(recipe)
-			return redirect(url_for('country_page', country = country))
+			genre = recommendation.genre
+			session.delete(recommendation)
+			return redirect(url_for('genre_page', genre = genre))

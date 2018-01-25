@@ -17,25 +17,25 @@
 <p id="about the site"><font color="white">This site comes to help readers find books they like and recommend books for other. how does it work? you can choose a genre and find a book you are interested in or post a new recommendation. have fun! :) </font> </p>
 </div>
 <div id="post-link">
-<a href="{{url_for('post_recipe')}}"> <font color="black">Post recipe!</font></a> 
+<a href="{{url_for('post_page')}}"> <font color="black">Post recipe!</font></a> 
 </div>
 <div class="shared">
 <ul>
   <br>
   <h3> <font color="white">genre</font></h3>
-  <li><a href="{{url_for('country_page', country='fantasy')}}"><img src="{{ url_for('static', filename = 'img/fantasy.jpg')}}" alt="fantasy" style="width:70px;height:60px;"></a></li>
+  <li><a href="{{url_for('genre_page', genre='fantasy')}}"><img src="{{ url_for('static', filename = 'img/fantasy.jpg')}}" alt="fantasy" style="width:70px;height:60px;"></a></li>
  
   <br>
 
-  <li><a href="{{url_for('country_page', country='history')}}"><img src="{{ url_for('static', filename = 'img/history.jpg')}}" alt="history" style="width:70px;height:60px;"></a></li>
+  <li><a href="{{url_for('genre_page', genre='history')}}"><img src="{{ url_for('static', filename = 'img/history.jpg')}}" alt="history" style="width:70px;height:60px;"></a></li>
   <br>
 
-  <li><a href="{{url_for('country_page', country='science')}}"><img src="{{ url_for('static', filename = 'img/science.jpg')}}" alt="science" style="width:70px;height:60px;"></a></li>
+  <li><a href="{{url_for('genre_page', genre='science')}}"><img src="{{ url_for('static', filename = 'img/science.jpg')}}" alt="science" style="width:70px;height:60px;"></a></li>
   <br>
 
-  <li><a href="{{url_for('country_page', country='suspense')}}"><img src="{{ url_for('static', filename = 'img/suspense.jpg')}}" alt="suspense" style="width:70px;height:60px;"></a></li> <br>
+  <li><a href="{{url_for('genre_page', genre='suspense')}}"><img src="{{ url_for('static', filename = 'img/suspense.jpg')}}" alt="suspense" style="width:70px;height:60px;"></a></li> <br>
 
-<li><a href="{{url_for('country_page', country='languages')}}"><img src="{{ url_for('static', filename = 'img/languages.jpg')}}" alt="languages" style="width:70px;height:60px;"></a></li>
+<li><a href="{{url_for('genre_page', genre='languages')}}"><img src="{{ url_for('static', filename = 'img/languages.jpg')}}" alt="languages" style="width:70px;height:60px;"></a></li>
 </ul>
 </div>
 <!-- <div class="imagecontainer">

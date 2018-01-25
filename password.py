@@ -26,7 +26,7 @@ class User(UserMixin, Base):
         return check_password_hash(self.pw_hash, password)
 
 
-class Recipe(Base):
+class recommendation(Base):
     __tablename__ = 'recommendation'
     id            = Column(Integer, primary_key=True)
     owner         = Column(Integer, ForeignKey('user.id'))
