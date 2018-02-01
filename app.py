@@ -128,4 +128,4 @@ def delete_recommendation(recommendation_id):
 			session.delete(recommendation)
 			return redirect(url_for('genre', genre = genre))
 
-app.run()
+# app.run()
