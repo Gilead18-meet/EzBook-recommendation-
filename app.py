@@ -5,7 +5,7 @@ from sqlalchemy import ForeignKey
 
 # flask setup
 app = Flask(__name__)
-app.config ['SQLALCHEMY_DATABASE_URI']= 'sqlite:///./test.db'
+app.config ['SQLALCHEMY_DATABASE_URI']= 'sqlite:///./test1.db'
 db = SQLAlchemy(app)
 session=db.session
 # flask-login imports
