@@ -44,26 +44,6 @@ db.create_all()
 import cgi
 
 
-@app.route('/')
-def test_homepage():
-	return render_template('home.html')
-
-
-'''
-@app.route('/post/<int:post_id>')
-def post_recipe(post_id):
-		recipe = session.query(Recipe).filter_by(id = post_id).first()
-		return render_template('post.html', recipe = recipe)'''
-
-
-'''
-@app.route('/countries/<string:country>')
-def country_page(country):
-	recipes = session.query(Recipe).filter_by(country=country).all()
-	return render_template('country.html', recipes=recipes, country=country)
-
-
-'''
 
 @app.route('/')
 def index():
@@ -128,4 +108,4 @@ def delete_recommendation(recommendation_id):
 			session.delete(recommendation)
 			return redirect(url_for('genre', genre = genre))
 
-# app.run()
+app.run()
