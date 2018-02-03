@@ -12,32 +12,21 @@
     text-align: center;
     font-size: 250%
 }
-.recipe-container{
+.recommendation-container{
     margin: auto;
     width: 80%;
     font-size: 150%;
     background-color: #E8C384;
     
 }
-.recipe-img{
+.genre-img{
     width: 300px;
 }
 #logo{
     text-align: center;
     width: 400%
 
-}
-.recipe-body{
-    text-align: center;
+
 }
 
-/*#falafel{
-    position: absolute;
-    left: 20%;
-    top: 100%;
-}
-#pizza{
-    position: absolute;
-    left: 120%;
-    top: 0%;
-}*/
+    
