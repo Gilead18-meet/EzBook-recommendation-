@@ -16,7 +16,7 @@
 <img src="{{ url_for('static', filename = 'img/logo.jpg')}}" height="200" width="300">
 </center>
         <h1> <font color="white"> <font size= "15"></style>{{country}}</font> </font></h1>
-        <a href="{{url_for('test_homepage')}}"> <font color="black"><font size= "6">Back Home</font></font></a>
+        <a href="{{url_for('post_recommendation')}}"> <font color="black"><font size= "6">Back Home</font></font></a>
       </div> 
         {% for recommendation in recommendations %}
           <div class="recommendation-container">
